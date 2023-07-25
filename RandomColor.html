@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="random.css">
+    <title>Random Color Generator</title>
+  </head>
+  <body>
+    <button id="colorButton">Generate Random Color</button>
+
+    <script>
+      function generateRandomColor() {
+        var r = Math.floor(Math.random() * 256);
+        var g = Math.floor(Math.random() * 256);
+        var b = Math.floor(Math.random() * 256);
+        return `rgb(${r}, ${g}, ${b})`;
+      }
+
+      document.getElementById("colorButton").addEventListener("click", function() {
+        var randomColor = generateRandomColor();
+        document.body.style.backgroundColor = randomColor;
+      });
+    </script>
+  </body>
+</html>
